@@ -6,11 +6,14 @@ function App() {
     {id:2,name:"Poch",gender:"Male"},
     {id:3,name:"Cream",gender:"Female"}
   ]);
+
+  const [show,setShow]=useState(true)
   return (
     <>
       <h1>จำนวนประชากร {data.length} คน</h1>      
+      <button onClick={()=>setShow(!show)}>{show ? "Hide": "Show"}</button>
       <ul>
-        {data.map((item)=>(
+        {show && data.map((item)=>(
           <li key={item.id}> <h3>{item.id} | {item.name} | {item.gender}</h3></li>
         ))}
       </ul>
