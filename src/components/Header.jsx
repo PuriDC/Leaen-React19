@@ -1,11 +1,10 @@
 import "./Header.css"
 
 // export default function Header(){
-const Header=(props)=>{
-    const {title} = props
+const Header=({title})=>{
     return(
         <nav>
-            <h1>{props.title}</h1> 
+            <h1>{title}</h1> 
             <button>Light/Dark</button>
         </nav>
     );
