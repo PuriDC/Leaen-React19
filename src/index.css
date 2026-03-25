@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+button{
+  background: skyblue;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+main{
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #000;
+}
