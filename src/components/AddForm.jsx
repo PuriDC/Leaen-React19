@@ -22,7 +22,7 @@ export default function AddForm(){
                     <option>Male</option>
                     <option>FeMale</option>
                 </select>
-                <button type="submit" className="btn-save">Submit</button>
+                <button type="submit" className="btn-save" disabled={name.trim()===""}>Submit</button>
             </form>
         </section>
     );
