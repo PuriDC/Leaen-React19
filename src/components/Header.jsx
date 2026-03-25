@@ -1,4 +1,6 @@
 import "./Header.css"
+import { GoSun } from "react-icons/go";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
 // export default function Header(){
 const Header=({title,theme,setTheme})=>{
@@ -14,7 +16,9 @@ const Header=({title,theme,setTheme})=>{
     return(
         <nav>
             <h1>{title}</h1> 
-            <button onClick={toggleTheme}>Mode : {theme}</button>
+            <span onClick={toggleTheme}>
+                {theme=="light" ? <GoSun size={25}/> : <BsFillMoonStarsFill size={25}/>}
+            </span>
         </nav>
     );
 };
