@@ -10,12 +10,16 @@ function App() {
     { id: 3, name: "Cream", gender: "Female" },
     { id: 4, name: "Ploy", gender: "Female" }
   ]);
-  
+
+  function deleteUser(id){
+    const result = data.filter((user)=>user.id!==id) //new array
+    setData(result)
+  }
   return (
     <div className="app">
       <Header title="PersonApp"/>
       <main>
-        <PersonList data={data}/>
+        <PersonList data={data} deleteUser={deleteUser}/>
       </main>
     </div>
   );

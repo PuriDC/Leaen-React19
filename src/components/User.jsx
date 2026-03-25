@@ -1,6 +1,6 @@
 import boy from "../assets/boy.svg";
 import girl from "../assets/girl.svg";
-export default function User({item}) {
+export default function User({item,deleteUser}) {
   return (
     <>
       <li
@@ -12,7 +12,7 @@ export default function User({item}) {
         <img src={item.gender == "Male" ? boy : girl} width={50} height={50} />
         <p>{item.name}</p>
         <div className="control">
-          <button>Delete</button>
+          <button onClick={()=>deleteUser(item.id)}>Delete</button>
         </div>
       </li>
     </>
