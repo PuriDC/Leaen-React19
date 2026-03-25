@@ -11,11 +11,15 @@ function PersonList() {
   ]);
 
   const [show, setShow] = useState(true);
+  const myStyle={
+    color:"purple",
+    fontSize:"20px"
+  }
 
   return (
     <div className="container">
       <div className="header">
-        <h2>จำนวนประชากร {data.length} คน</h2>
+        <h2 style={{color:"skyblue", fontSize:"25px"}}>จำนวนประชากร {data.length} คน</h2>
         <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
       </div>
       <ul>
@@ -23,7 +27,7 @@ function PersonList() {
           data.map((item) => (
             <li key={item.id}>
                 <img src={item.gender == "Male" ? boy : girl} width={50} height={50} />
-                <p>{item.name}</p>
+                <p style={myStyle}>{item.name}</p>
                 <div className="control">
                   <button>Delete</button>
                 </div>
