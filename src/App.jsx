@@ -6,10 +6,10 @@ import "./App.css"
 
 function App() {
   const [data, setData] = useState([
-    { id: 1, name: "Pooh", gender: "Male" },
-    { id: 2, name: "Poch", gender: "Male" },
-    { id: 3, name: "Cream", gender: "Female" },
-    { id: 4, name: "Ploy", gender: "Female" }
+    // { id: 1, name: "Pooh", gender: "Male" },
+    // { id: 2, name: "Poch", gender: "Male" },
+    // { id: 3, name: "Cream", gender: "Female" },
+    // { id: 4, name: "Ploy", gender: "Female" }
   ]);
 
   function deleteUser(id){
@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <Header title="PersonApp"/>
       <main>
-        <AddForm/>
+        <AddForm data={data} setData={setData}/>
         <PersonList data={data} deleteUser={deleteUser}/>
       </main>
     </div>
